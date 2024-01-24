@@ -9,8 +9,22 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(122, 200, 220);
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-/* .btn {
+.btn {
   padding: 20px;
+  color: white;
+  background-color: tomato;
+  border: none;
   margin: 10px;
-} */
+  border-radius: 10px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: transform 0.2s linear;
+  letter-spacing: 1px;
+}
+.btn:active {
+  transform: scale(1.4);
+}
