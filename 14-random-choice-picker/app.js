@@ -1,5 +1,5 @@
-const tagsEl = document.getElementById("tags");
-const txtArea = document.querySelector(".textarea");
+const tagsEl = document.querySelector(".tags");
+const txtArea = document.getElementById("textarea");
 
 txtArea.focus();
 
