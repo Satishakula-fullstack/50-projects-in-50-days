@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f9f9f9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.card {
+  background-color: #ffff;
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.12), 0 5px 7px rgba(0, 0, 0, 0.24);
+}

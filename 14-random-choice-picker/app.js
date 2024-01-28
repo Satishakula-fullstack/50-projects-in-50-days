@@ -1,11 +1,11 @@
 const tagsEl = document.querySelector(".tags");
-const txtArea = document.getElementById("textarea");
+const txtAreaEl = document.querySelector(".textarea");
 
-txtArea.focus();
+txtAreaEl.focus();
 
-txtArea.addEventListener("keyup", (e) => {
+txtAreaEl.addEventListener("keyup", (e) => {
+  //   console.log(e.target.value);
   createTags(e.target.value);
-
   if (e.key === "Enter") {
     setTimeout(() => {
       e.target.value = "";
@@ -19,12 +19,13 @@ function createTags(input) {
     .split(",")
     .filter((tag) => tag.trim() !== "")
     .map((tag) => tag.trim());
+  //   console.log(tag);
 
   tagsEl.innerHTML = "";
   tags.forEach((tag) => {
     const tagEl = document.createElement("span");
-    tagEl.classList.add("tag");
     tagEl.innerText = tag;
+    tagEl.classList.add("tag");
     tagsEl.appendChild(tagEl);
   });
 }
@@ -33,11 +34,11 @@ function randomSelect() {
   const times = 30;
 
   const interval = setInterval(() => {
-    const randomTag = pickRandomTag();
-    highlightTag(randomTag);
+    const tag = pickRandomTag();
+    highlightTag(tag);
 
     setTimeout(() => {
-      unHightlightTag(randomTag);
+      unHightlightTag(tag);
     }, 100);
   }, 100);
 
@@ -59,7 +60,6 @@ function pickRandomTag() {
     return null;
   }
 }
-
 function highlightTag(tag) {
   tag.classList.add("highlight");
 }
